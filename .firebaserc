@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angulareventplaner": {
+      "hosting": {
+        "AngularEventPlaner": [
+          "angulareventplaner"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angulareventplaner"
+  }
+}

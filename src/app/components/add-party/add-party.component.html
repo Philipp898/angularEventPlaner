@@ -1,0 +1,15 @@
+<form class="mb-5" *ngIf="showAddParty" (ngSubmit)="onSubmit()">
+    <div class="m-5">
+        <label class="block" for="name">Party: </label>
+        <input type="text" class="w-full h-10 m-1 px-1 py-1 text-base" name="name" [(ngModel)]="name" id="name" placeholder="Add Party" /> 
+    </div>
+    <div class="m-5">
+    <label class="block" for="tag">Tag: </label>
+        <input type="text" class="w-full h-10 m-1 px-1 py-1 text-base" name="tag"  [(ngModel)]="tag" id="tag" placeholder="Add Tag" />
+    </div>
+    <div class="m-5 flex items-center justify-between">
+        <label class="block" for="zukunft">Zukunft: </label>
+        <input type="checkbox" class="" name="zukunft"  [(ngModel)]="zukunft" id="zukunft"/>
+    </div>
+    <input type="submit" value="Erstelle Party" class="w-full inline-block bg-slate-500 py-2 px-5 m-1 cursor-pointer decoration-transparent text-base text-gray-800">
+</form>
