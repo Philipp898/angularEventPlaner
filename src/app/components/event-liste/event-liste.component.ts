@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Nutzer } from 'src/app/models/Nutzer';
 import { Party } from 'src/app/models/Party';
+import { AuthService } from 'src/app/services/auth.service';
 import { NutzerService } from 'src/app/services/nutzer.service';
 import { PartyService } from 'src/app/services/party.service';
 
@@ -14,7 +15,7 @@ export class EventListeComponent implements OnInit {
   parties:Party[] = [];
   nutzer:Nutzer[] = [];
 
-  constructor(private partyService: PartyService ,private nutzerService: NutzerService) { }
+  constructor(private partyService: PartyService ,private nutzerService: NutzerService ,private authService: AuthService) { }
 
   ngOnInit(): void {
    this.partyService.getAllParties().subscribe((parties) => this.parties = parties);
@@ -32,6 +33,10 @@ export class EventListeComponent implements OnInit {
 
   deleteParty(party:Party){
    this.partyService.deleteParty(party);
+  }
+
+  signOut() {
+    this.authService.logout();
   }
 
 }
