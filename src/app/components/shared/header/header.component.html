@@ -1,6 +1,6 @@
 <header class="flex mb-20 justify-between items-center"> 
     <h1 class="text-4xl font-semibold">{{title}}</h1>
-    <app-button *ngIf="hasRoute('/')"
+    <app-button *ngIf="hasRoute('/event-liste')"
     text="{{showAddParty ? 'Schließen' :'Hinzufügen'}}" 
     class="rounded-lg p-2 text-sm text-gray-700 {{showAddParty ? 'bg-red-500' :'bg-green-500'}}" 
     (btnClick)="AddEvent()"></app-button>
