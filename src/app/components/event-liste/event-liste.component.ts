@@ -15,7 +15,7 @@ export class EventListeComponent implements OnInit {
   parties:Party[] = [];
   nutzer:Nutzer[] = [];
 
-  constructor(private partyService: PartyService ,private nutzerService: NutzerService ,private authService: AuthService) { }
+  constructor(private partyService: PartyService ,private nutzerService: NutzerService) { }
 
   ngOnInit(): void {
    this.partyService.getAllParties().subscribe((parties) => this.parties = parties);
@@ -33,10 +33,6 @@ export class EventListeComponent implements OnInit {
 
   deleteParty(party:Party){
    this.partyService.deleteParty(party);
-  }
-
-  signOut() {
-    this.authService.logout();
   }
 
 }
