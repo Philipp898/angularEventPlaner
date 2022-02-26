@@ -1,6 +1,6 @@
 <app-add-party (onAddParty)="AddParty($event)"></app-add-party>
 <app-party-details *ngFor="let party of parties" [party]="party" (onDeleteParty)="deleteParty(party)" (onToggleZukunft)="toggleZukunft(party)"></app-party-details>
-<button (click)="signOut()">Sign Out</button>
+
 
 
 

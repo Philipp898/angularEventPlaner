@@ -50,3 +50,7 @@ package-lock.json
 src/app/mock-data.ts
 src/environments/environment.ts
 src/environments/environment.prod.ts
+sampledata/firebase-export-metadata.json
+sampledata/auth_export/accounts.json
+sampledata/auth_export/config.json
+sampledata/firestore_export/firestore_export.overall_export_metadata

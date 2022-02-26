@@ -4,4 +4,5 @@
     text="{{showAddParty ? 'Schließen' :'Hinzufügen'}}" 
     class="rounded-lg p-2 text-sm text-gray-700 {{showAddParty ? 'bg-red-500' :'bg-green-500'}}" 
     (btnClick)="AddEvent()"></app-button>
+    <button [disabled]="!userLoggedIn()" class="{{userLoggedIn() ? 'visible':'hidden'}} rounded-lg p-2 text-sm text-gray-700  bg-red-400" (click)="signOut()">Abmelden</button>
 </header>
